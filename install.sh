@@ -2,6 +2,8 @@
 
 stowver=2.1.3
 
+apt-get -y -qq install build-essential
+
 mkdir -p /usr/local/src
 cd /usr/local/src
 curl -O http://ftp.gnu.org/gnu/stow/stow-$stowver.tar.gz
