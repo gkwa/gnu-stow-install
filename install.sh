@@ -1,5 +1,12 @@
 #!/bin/sh
 
+if yum >/dev/null 2>&1
+then
+	# stow relies on perl's Test::Output, so fetch with cpan, but amazon
+	# awi doesn't provide cpan
+	yum -y install perl-CPAN
+fi
+
 stowver=2.1.3
 
 mkdir -p /usr/local/src
