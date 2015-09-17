@@ -2,9 +2,13 @@
 
 if yum >/dev/null 2>&1
 then
+	yum install -y make automake gcc gcc-c++ kernel-devel curl
 	# stow relies on perl's Test::Output, so fetch with cpan, but amazon
 	# awi doesn't provide cpan
 	yum -y install perl-CPAN
+else
+	apt-get -y -qq update
+	apt-get -y -qq install build-essential libncurses-dev curl
 fi
 
 stowver=2.1.3
