@@ -8,7 +8,7 @@ then
 	yum -y install perl-CPAN
 else
 	apt-get -y -qq update
-	apt-get -y -qq install build-essential libncurses-dev curl
+	apt-get -y -qq install build-essential libncurses-dev curl make
 fi
 
 stowver=2.1.3
